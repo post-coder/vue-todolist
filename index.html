@@ -53,6 +53,7 @@
                     class="form-control" 
                     aria-label="Nuovo task" 
                     aria-describedby="inputGroup-sizing-default"
+                    @keyup.enter="addTask()"
                 >
                 <button 
                     class="btn btn-outline-secondary" 
