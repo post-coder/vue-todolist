@@ -24,6 +24,8 @@ createApp({
                 }
             ],
 
+            newTaskText: '',
+
         }
     },
 
@@ -36,7 +38,30 @@ createApp({
 
             this.tasks.splice(taskIndex, 1);
 
-        }
+        },
+
+        addTask() {
+            // contenuto del campo di testo
+            // console.log(this.newTaskText)
+
+            // creo un nuovo oggetto task
+            const newTask = {
+                done: false
+            }
+
+            // inserisco il testo all'interno della sua proprietà "text"
+            newTask.text = this.newTaskText
+
+
+            // lo inserisco nell'array
+            this.tasks.push(newTask)
+
+            console.log(this.tasks)
+
+            // resetto il contenuto del campo di input
+            this.newTaskText = ""
+
+        },
 
     },
 }).mount("#app");
