@@ -1,3 +1,8 @@
 #tasks .fa-square-xmark {
     cursor: pointer;
 }
+
+#tasks .list-group-item span {
+    cursor: pointer;
+    user-select: none;
+}

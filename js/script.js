@@ -70,5 +70,15 @@ createApp({
                 this.newTask.text = ""
             }
         },
+
+        toggleTask(taskIndex) {
+            // proprietà del task selezionato:
+            // console.log(this.tasks[taskIndex].done)
+
+            // qui diciamo che la proprietà done del task selezionato deve essere uguale al suo contrario
+            // notare che ho messo il punto esclamativo durante l'assegnazione
+            // questo funziona solo perchè la proprietà è un booleano, quindi da false può diventare true e vv
+            this.tasks[taskIndex].done = ! this.tasks[taskIndex].done
+        },
     },
 }).mount("#app");

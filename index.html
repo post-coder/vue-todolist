@@ -31,8 +31,12 @@
                 <li 
                     v-for="(task, index) in tasks"
                     class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                    :class="task.done ? 'bg-success text-white' : ''"
                 >
-                    <span :class=" task.done ? 'text-decoration-line-through' : '' ">
+                    <span   
+                        :class=" task.done ? 'text-decoration-line-through' : '' "
+                        @click="toggleTask(index)"
+                    >
                         {{ task.text }}
                     </span> 
 
